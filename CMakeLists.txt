@@ -217,7 +217,7 @@ if(MSVC)
 	string(REGEX REPLACE "[/-]W[1234][ ]?" "" CMAKE_C_FLAGS ${CMAKE_C_FLAGS})
 	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -MP -W4 ${MSVC_DISABLED_WARNINGS_STR}")
 else()
-	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wnull-dereference")
 endif()
 
 # XXX - needs _GNU_SOURCE on linux
